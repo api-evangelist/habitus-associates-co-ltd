@@ -1,9 +1,28 @@
 aid: habitus-associates-co-ltd
 name: Habitus Associates Co., Ltd.
-description: Habitus Associates Co., Ltd. is a company surfaced as a portfolio company of 500-global and
-  added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Habitus Associates Co., Ltd. is the company behind Artue (artue.io), an
+  AI-powered online marketplace for original artworks by Korean and
+  international artists. Artue lets collectors discover, purchase, and resell
+  paintings, photography, sculptures, and prints, with natural-language search
+  that finds works by mood, color, style, room type, or budget. The platform is
+  explicitly agent-native: it publishes an llms.txt and ships a hosted Model
+  Context Protocol (MCP) server so AI assistants such as Claude and ChatGPT can
+  search its collection directly. Backed by 500 Global and surfaced into the API
+  Evangelist network from that portfolio.
 url: https://raw.githubusercontent.com/api-evangelist/habitus-associates-co-ltd/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://artue.io/favicon/favicon-96x96.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,9 +31,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Art
+- Marketplace
+- E-commerce
+- AI
+- MCP
+- Korea
+- Discovery
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,5 +48,17 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: MCPServer
+  name: Artue MCP server (search_artworks)
+  url: mcp/habitus-associates-co-ltd-mcp.yml
+- type: LLMsTxt
+  url: llms/habitus-associates-co-ltd-llms.txt
+- type: DomainSecurity
+  url: security/habitus-associates-co-ltd-domain-security.yml
 - type: Website
   url: https://artue.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

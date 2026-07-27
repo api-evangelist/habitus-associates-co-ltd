@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://artue.io/llms.txt
+server:
+  name: artue-mcp
+  version: 1.0.0
+  transport: http
+  protocol_version: '2024-11-05'
+  url: https://artue.io/api/mcp
+  capabilities:
+    tools:
+      listChanged: false
+  probe:
+    endpoint: https://artue.io/api/mcp
+    get_status: 405
+    initialize_status: 200
+    initialize_server_info:
+      name: artue-mcp
+      version: 1.0.0
+alternate_servers:
+  - client: chatgpt
+    transport: http
+    url: https://chatgpt-app-with-next-js-t66k.vercel.app/mcp
+    note: ChatGPT app store MCP endpoint (per artue.io/llms.txt)
+tools:
+  - name: search_artworks
+    title: Search Artue artworks
+    description: Search Artue's curated collection of original artworks by Korean
+      and international artists. Find artworks by mood, style, color, medium, size,
+      or budget.
+    input_schema:
+      type: object
+      properties:
+        query:
+          type: string
+          description: Natural language search query, e.g. "calming blue paintings
+            under $2000" or "abstract works by Korean artists".
+      required:
+        - query
+      additionalProperties: false
