@@ -1,0 +1,32 @@
+{
+  "endpoint": "https://artue.io/api/mcp",
+  "captured": "2026-10-20",
+  "method": "initialize + tools/list (anonymous, no tool called; roadmap#992)",
+  "protocol_version": "2024-11-05",
+  "server_info": {
+    "name": "artue-mcp",
+    "version": "1.0.0"
+  },
+  "result": {
+    "tools": [
+      {
+        "name": "search_artworks",
+        "title": "Search Artue artworks",
+        "description": "Search Artue's curated collection of original artworks by Korean and international artists. Find artworks by mood, style, color, medium, size, or budget.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Natural language search query, e.g. \"calming blue paintings under $2000\" or \"abstract works by Korean artists\"."
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "additionalProperties": false
+        }
+      }
+    ]
+  }
+}
